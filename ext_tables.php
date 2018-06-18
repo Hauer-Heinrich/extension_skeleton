@@ -5,7 +5,7 @@ call_user_func(function() {
 
     $_EXTENSION = "extension_skeleton";
 
-    // Automatically include TypoScript "setup.ts" and "constants.ts"
+    // Automatically include TypoScript "setup.typoscript" and "constants.typoscript"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTENSION, 'Configuration/TypoScript', 'TS Title Custom');
 
     // Add translations for table in BE

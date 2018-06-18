@@ -64,3 +64,13 @@ indent_size = 4
 [{package.json,.travis.yml}]
 indent_style = space
 indent_size = 2
+
+# TypoScript-Files
+[*.typoscript]
+indent_style = space
+indent_size = 4
+
+# TypoScript-Files OLD
+[*.ts]
+indent_style = space
+indent_size = 4

@@ -26,7 +26,7 @@ call_user_func(function() {
 
     // Automatically include PageTS
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTENSION . '/Configuration/PageTS/mod.ts">'
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTENSION . '/Configuration/PageTS/mod.typoscript">'
     );
 
     // Register icons to use in TYPO3 - TS and extbase
