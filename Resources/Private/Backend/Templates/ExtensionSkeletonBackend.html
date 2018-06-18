@@ -1,0 +1,50 @@
+<div class="example">
+    <f:switch expression="{pi_flexform_transformed.switchableControllerActions}">
+        <f:case value="Example->list">
+            <f:render section="listview" arguments="{_all}" />
+        </f:case>
+        <f:case value="Example->show">
+            <f:render section="showview" arguments="{_all}" />
+        </f:case>
+        <f:defaultCase>
+            Error in backend template file: no or wrong action
+        </f:defaultCase>
+    </f:switch>
+</div>
+
+
+<f:section name="listview">
+    <div class="header">
+        <h2>Example</h2>
+        <h3>List View</h3>
+    </div>
+    <div class="layout">
+        <span>Layout: </span>
+        <f:switch expression="{pi_flexform_transformed.settings.layout}">
+            <f:case value="1">
+                My used layout
+            </f:case>
+            <f:defaultCase>
+                No layout used
+            </f:defaultCase>
+        </f:switch>
+    </div>
+</f:section>
+
+<f:section name="showview">
+    <div class="header">
+        <h2>Example</h2>
+        <h3>Show View</h3>
+    </div>
+    <div class="layout">
+        <span>Layout: </span>
+        <f:switch expression="{pi_flexform_transformed.settings.layout}">
+            <f:case value="1">
+                My used layout
+            </f:case>
+            <f:defaultCase>
+                No layout used
+            </f:defaultCase>
+        </f:switch>
+    </div>
+</f:section>

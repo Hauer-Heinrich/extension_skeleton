@@ -1,1 +1,1 @@
-extension_skeleton
+Example extension skeleton for TYPO3

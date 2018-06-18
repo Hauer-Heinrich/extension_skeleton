@@ -1,0 +1,20 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<picture>
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '1920')}" media="(min-width: 1601px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '1600')}" media="(min-width: 1334px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '1333')}" media="(min-width: 1001px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '1000')}" media="(min-width: 801px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxWidth: '800')}" media="(min-width: 601px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxWidth: '600')}" media="(min-width: 401px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxWidth: '400')}" media="(min-width: 321px)">
+        <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxWidth: '320')}" media="(min-width: 200px)">
+        <img src="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '{data.imagewidth}')}"
+            height="{image.originalResource.properties.height}"
+            width="{image.originalResource.properties.width}"
+            {f:if(condition: '{image.originalResource.title}', then: 'title="{image.originalResource.title}"')}
+            {f:if(condition: '{image.originalResource.alternative}', then: 'alt="{image.originalResource.alternative}"')}
+        />
+    </picture>
+
+</html>

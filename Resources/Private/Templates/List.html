@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <h1>Output of ListAction</h1>
+    <f:for each="{allexamples}" as="example">
+        <article>
+            <h3>{example.textline}</h3>
+            <f:link.action action="show" arguments="{example : example}" pageUid="{settings.singleViewPageUid}" rel="bookmark" class="detail-link">
+                go to detail view
+            </f:link.action>
+        </article>
+    </f:for>
+
+    <f:debug>{_all}</f:debug>
+</f:section>
+
+</html>
+

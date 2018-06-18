@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <h1>Output of ShowAction</h1>
+    <h2>{example.textline}</h2>
+
+    <f:if condition="{example.images}">
+        <div class="example-images">
+            <f:for each="{example.images}" as="pic">
+                <f:render partial="Media/Image" arguments="{image: pic}" />
+            </f:for>
+        </div>
+    </f:if>
+
+    <f:link.action action="list" pageUid="{settings.listViewPageUid}">Back to list view</f:link.action>
+
+    <f:debug>{_all}</f:debug>
+</f:section>
+
+</html>

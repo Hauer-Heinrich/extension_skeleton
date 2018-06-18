@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "path": "./../../../"
+        }
+    ],
+    "settings": {
+        "editor.tabSize": 4,
+        "easysass.targetDir": "./typo3conf/ext/extension_skeleton/Resources/Public/Css/",
+        "liveSassCompile.settings.formats": [
+            {
+              "format": "compressed",
+              "extensionName": ".min.css",
+              "savePath": "./typo3conf/ext/hhthemefotofinder/Resources/Public/Css/"
+            },
+            {
+                "format": "expanded",
+                "extensionName": ".css",
+                "savePath": "./typo3conf/ext/hhthemefotofinder/Resources/Public/Css/"
+            }
+        ]
+    }
+}
