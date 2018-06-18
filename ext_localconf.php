@@ -3,16 +3,16 @@ defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(function() {
 
-    $_EXTENSION = "extension_skeleton";
-    $_EXTENSIONNAME = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTENSION);
-    $_VENDOR = "HauerHeinrich";
+    $extension = "extension_skeleton";
+    $extensionname = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extension);
+    $vendor = "HauerHeinrich";
 
     // Start: Plugin listview
-    $_PLUGIN = 'Listview';
+    $plugin = 'Listview';
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        $_VENDOR . '.' . $_EXTENSIONNAME,
-        $_PLUGIN,
+        $vendor . '.' . $extensionname,
+        $plugin,
         [
             // Allowed Controllers and there Actions = ControllerName => Actions
             'Example' => 'list, show'
@@ -26,14 +26,14 @@ call_user_func(function() {
 
     // Automatically include PageTS
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTENSION . '/Configuration/PageTS/mod.typoscript">'
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $extension . '/Configuration/PageTS/mod.typoscript">'
     );
 
     // Register icons to use in TYPO3 - TS and extbase
     if (TYPO3_MODE === 'BE') {
         $icons = [
             // you can customize the name (IconIdentifier)
-            $_EXTENSION . '-plugin-' . strtolower($_PLUGIN) => 'user_plugin_listview.svg',
+            $extension . '-plugin-' . strtolower($plugin) => 'user_plugin_listview.svg',
         ];
 
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -41,7 +41,7 @@ call_user_func(function() {
             $iconRegistry->registerIcon(
                 $identifier,
                 \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-                ['source' => 'EXT:' . $_EXTENSION . '/Resources/Public/Icons/' . $path]
+                ['source' => 'EXT:' . $extension . '/Resources/Public/Icons/' . $path]
             );
         }
     }

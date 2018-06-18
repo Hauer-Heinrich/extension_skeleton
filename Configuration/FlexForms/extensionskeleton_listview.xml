@@ -28,7 +28,7 @@
                     </switchableControllerActions>
                     <settings.layout>
                         <TCEforms>
-                            <label>Layouts (filled from mod.ts -> tx_extension_skeleton_listview.layouts)</label>
+                            <label>Layouts (filled from mod.typoscript -> tx_extension_skeleton_listview.layouts)</label>
                             <config>
                                 <type>select</type>
                                 <itemsProcFunc>HauerHeinrich\ExtensionSkeleton\Hooks\ItemsProcFunc->layouts</itemsProcFunc>
