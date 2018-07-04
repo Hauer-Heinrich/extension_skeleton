@@ -1,6 +1,6 @@
 ### Add layouts to choose in BE
 tx_extension_skeleton_listview.layouts {
-    1 = example layout title
+    1 = LLL:EXT:extension_skeleton/Resources/Private/Language/locallang.xlf:plugin.layout_1.title
 }
 
 mod {
@@ -12,9 +12,9 @@ mod {
                 listview {
                     iconIdentifier = extension_skeleton-plugin-example
                     ### Title witch is shown in BE tab "Plugins"
-                    title = Example
+                    title = LLL:EXT:extension_skeleton/Resources/Private/Language/locallang.xlf:plugin.title
                     ### Description witch is shown in BE tab "Plugins"
-                    description = Example description
+                    description = LLL:EXT:extension_skeleton/Resources/Private/Language/locallang.xlf:plugin.description
                     tt_content_defValues {
                         CType = list
                         ### PluginSignature = ExtensionName_PluginName lowercase
@@ -28,7 +28,7 @@ mod {
         ### Custom Tab identifier Name
         myIdentifier {
             ### New tab title at the BE NewContentElementWizard
-            header = Example
+            header = LLL:EXT:extension_skeleton/Resources/Private/Language/locallang.xlf:ce.tab.title
             ### After witch tab this new tab is shown (optional)
             after = common
             elements {
@@ -36,9 +36,9 @@ mod {
                 listview {
                     iconIdentifier = extension_skeleton-plugin-example
                     ### Title witch is shown in new tab
-                    title = Example
+                    title = LLL:EXT:extension_skeleton/Resources/Private/Language/locallang.xlf:ce.title
                     ### Description witch is shown in new tab
-                    description = List example
+                    description = LLL:EXT:extension_skeleton/Resources/Private/Language/locallang.xlf:ce.description
                     tt_content_defValues {
                         CType = list
                         ### PluginSignature = ExtensionName_PluginName lowercase
