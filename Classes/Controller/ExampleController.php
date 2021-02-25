@@ -5,6 +5,7 @@ use \TYPO3\CMS\Core\Messaging\AbstractMessage;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 // use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -28,7 +29,6 @@ class ExampleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * exampleRepository
      *
      * @var \HauerHeinrich\ExtensionSkeleton\Domain\Repository\ExampleRepository
-     * @inject
      */
     protected $exampleRepository = null;
 
@@ -45,6 +45,13 @@ class ExampleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @var int
      */
     protected $pageUid = 0;
+
+    /**
+     * @param \HauerHeinrich\ExtensionSkeleton\Domain\Repository\ExampleRepository $exampleRepository
+     */
+    public function injectExampleRepository(\HauerHeinrich\ExtensionSkeleton\Domain\Repository\ExampleRepository $exampleRepository) {
+        $this->exampleRepository = $exampleRepository;
+    }
 
     /**
      * Function will be called before every other action
@@ -67,6 +74,7 @@ class ExampleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
         if (!empty($pages)) {
             $all = $this->exampleRepository->findAll();
+            DebuggerUtility::var_dump($all);
             $this->view->assign('allexamples', $all);
         } else {
             $this->addFlashMessage(

@@ -20,11 +20,11 @@ $EM_CONF['extension_skeleton'] = [
     'uploadfolder' => 1,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.0',
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.0-8.7.99',
-            'fluid_styled_content' => '8.7.0-9.0.0'
+            'typo3' => '10.4.99',
+            'fluid_styled_content' => '10.4.99'
         ],
         'conflicts' => [],
         'suggests' => [],

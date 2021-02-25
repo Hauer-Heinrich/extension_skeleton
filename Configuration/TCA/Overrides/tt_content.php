@@ -1,8 +1,8 @@
 <?php
 defined('TYPO3_MODE') || die('Access denied.');
 
-$vendor = "HauerHeinrich";
-$extension = "extension_skeleton";
+$vendor = 'HauerHeinrich';
+$extension = 'extension_skeleton';
 $extensionname = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extension);
 
 // START: Plugin listview

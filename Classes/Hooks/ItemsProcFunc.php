@@ -22,10 +22,8 @@ namespace HauerHeinrich\ExtensionSkeleton\Hooks;
 
 use TYPO3\CMS\Core\Utility\StringUtility;
 
-class ItemsProcFunc
-{
-    public function layouts(array &$config)
-    {
+class ItemsProcFunc {
+    public function layouts(array &$config) {
         $pageId = 0;
 
         if (!StringUtility::beginsWith($config['row']['uid'], 'NEW')) {

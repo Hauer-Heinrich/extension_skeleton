@@ -10,12 +10,12 @@ call_user_func(function() {
 
     // Add translations for table in BE
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
-        'tx_extension_skeleton_domain_model_example', // Table name
+        'tx_extensionskeleton_domain_model_example', // Table name
         'EXT:' . $extension . '/Resources/Private/Language/locallang_csh_tx_extension_skeleton_domain_model_example.xlf'
     );
 
     // Allow table modify on BE List-Module
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages(
-        'tx_extension_skeleton_domain_model_example' // Table name
+        'tx_extensionskeleton_domain_model_example' // Table name
     );
 });
